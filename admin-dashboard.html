@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Committee Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to portal content</a>
+
+    <div class="portal-layout">
+
+      <aside class="sidebar" aria-label="Committee navigation">
+        <div class="sidebar-inner">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            MDB Committee
+          </div>
+          <nav class="menu" aria-label="Admin menu">
+            <a class="active" href="admin-dashboard.html" aria-current="page">
+              <em class="menu-icon" aria-hidden="true">⊞</em> Dashboard
+            </a>
+            <a href="admin-kaavu-management.html">
+              <em class="menu-icon" aria-hidden="true">⛩</em> Kaavu Management
+            </a>
+            <a href="admin-events.html">
+              <em class="menu-icon" aria-hidden="true">◷</em> Event Management
+            </a>
+            <a href="admin-payment-reports.html">
+              <em class="menu-icon" aria-hidden="true">◈</em> Financial Overview
+            </a>
+            <a href="admin-members.html">
+              <em class="menu-icon" aria-hidden="true">◉</em> Members
+            </a>
+            <a href="admin-approvals.html">
+              <em class="menu-icon" aria-hidden="true">✓</em> Approvals
+            </a>
+          </nav>
+        </div>
+        <div class="sidebar-logout">
+          <a href="index.html">
+            <em class="menu-icon" aria-hidden="true">↩</em> Logout
+          </a>
+        </div>
+      </aside>
+
+      <main id="main-content" class="portal-content">
+        <div class="portal-main">
+
+          <section class="portal-top">
+            <div>
+              <h3>Welcome, <span id="admin-name">Admin</span></h3>
+              <p>Live analytics for members, kaavu growth, and region-wise contributions.</p>
+            </div>
+            <span class="badge">Updated: Today 10:30 AM</span>
+          </section>
+
+          <!-- KPI cards -->
+          <section class="grid-4" aria-label="Key performance indicators">
+            <a class="card kpi-card" href="admin-members.html">
+              <div class="kpi">2,486</div>
+              <div class="kpi-label">Total Members</div>
+            </a>
+            <a class="card kpi-card" href="admin-kaavu-management.html">
+              <div class="kpi">126</div>
+              <div class="kpi-label">Total Kaavu</div>
+            </a>
+            <a class="card kpi-card" href="admin-payment-reports.html">
+              <div class="kpi">INR 12.8L</div>
+              <div class="kpi-label">Monthly Contributions</div>
+            </a>
+            <a class="card kpi-card" href="admin-approvals.html">
+              <div class="kpi">18</div>
+              <div class="kpi-label">Pending Approvals</div>
+            </a>
+          </section>
+
+          <!-- Bar charts row 1 -->
+          <section class="section analytics-grid">
+            <article class="card analytics-card">
+              <h3>Contributions by Region</h3>
+              <p>Current month collection performance across Kannur regions.</p>
+              <div class="bar-chart" role="list" aria-label="Contributions by region">
+                <div class="bar-row" role="listitem">
+                  <span>North Kannur</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width: 82%"></div></div>
+                  <strong>INR 4.2L</strong>
+                </div>
+                <div class="bar-row" role="listitem">
+                  <span>South Kannur</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width: 64%"></div></div>
+                  <strong>INR 3.1L</strong>
+                </div>
+                <div class="bar-row" role="listitem">
+                  <span>Central Kannur</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width: 52%"></div></div>
+                  <strong>INR 2.4L</strong>
+                </div>
+                <div class="bar-row" role="listitem">
+                  <span>Coastal Kannur</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width: 38%"></div></div>
+                  <strong>INR 1.8L</strong>
+                </div>
+              </div>
+              <div class="chart-footer">
+                <span class="status approved">Top: North Kannur</span>
+                <strong>Total: INR 11.5L</strong>
+              </div>
+            </article>
+
+            <article class="card analytics-card">
+              <h3>Members by Region</h3>
+              <p>Member distribution across all Kannur regions.</p>
+              <div class="bar-chart" role="list" aria-label="Members by region">
+                <div class="bar-row" role="listitem">
+                  <span>North Kannur</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width: 78%"></div></div>
+                  <strong>742</strong>
+                </div>
+                <div class="bar-row" role="listitem">
+                  <span>South Kannur</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width: 66%"></div></div>
+                  <strong>628</strong>
+                </div>
+                <div class="bar-row" role="listitem">
+                  <span>Central Kannur</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width: 55%"></div></div>
+                  <strong>514</strong>
+                </div>
+                <div class="bar-row" role="listitem">
+                  <span>Coastal Kannur</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width: 43%"></div></div>
+                  <strong>392</strong>
+                </div>
+              </div>
+              <div class="chart-footer">
+                <span class="status approved">Highest Base: North Kannur</span>
+                <strong>Total: 2,276 Members</strong>
+              </div>
+            </article>
+          </section>
+
+          <!-- Bar charts row 2 -->
+          <section class="section analytics-grid">
+            <article class="card analytics-card">
+              <h3>Membership Mix</h3>
+              <p>Member count by plan type across the network.</p>
+              <div class="pie-chart-row">
+                <div class="pie-chart-wrap" role="img" aria-label="Membership split: Yearly 200 forty percent, Yearly 1000 forty-eight percent, Lifetime twelve percent">
+                  <div class="pie-chart" aria-hidden="true"></div>
+                  <div class="pie-chart-hole" aria-hidden="true"></div>
+                </div>
+                <div class="pie-legend">
+                  <div class="pie-legend-item">
+                    <span class="pie-legend-swatch pie-legend-swatch--yearly200"></span>
+                    <span>Yearly (INR 200)</span>
+                    <span class="pie-legend-count">980</span>
+                  </div>
+                  <div class="pie-legend-item">
+                    <span class="pie-legend-swatch pie-legend-swatch--yearly1000"></span>
+                    <span>Yearly (INR 1,000)</span>
+                    <span class="pie-legend-count">1,204</span>
+                  </div>
+                  <div class="pie-legend-item">
+                    <span class="pie-legend-swatch pie-legend-swatch--lifetime"></span>
+                    <span>Lifetime</span>
+                    <span class="pie-legend-count">302</span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-footer">
+                <span class="status approved">Largest segment: Yearly INR 1,000</span>
+                <strong>Total: 2,486 members</strong>
+              </div>
+            </article>
+
+            <article class="card analytics-card">
+              <h3>Top 5 Kaavu by Contributions</h3>
+              <p>Current month collection volume by kaavu location.</p>
+              <div class="bar-chart" role="list" aria-label="Top kaavu by contributions">
+                <div class="bar-row bar-row--kaavu" role="listitem">
+                  <span>Muchilottu Kavu - Taliparamba</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width: 100%"></div></div>
+                  <strong>INR 3.8L</strong>
+                </div>
+                <div class="bar-row bar-row--kaavu" role="listitem">
+                  <span>Muchilottu Kavu - Payyanur</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill--rank2" style="width: 76%"></div></div>
+                  <strong>INR 2.9L</strong>
+                </div>
+                <div class="bar-row bar-row--kaavu" role="listitem">
+                  <span>Muchilottu Kavu - Azhikode</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill--rank3" style="width: 63%"></div></div>
+                  <strong>INR 2.4L</strong>
+                </div>
+                <div class="bar-row bar-row--kaavu" role="listitem">
+                  <span>Muchilottu Kavu - Pappinisseri</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill--rank4" style="width: 50%"></div></div>
+                  <strong>INR 1.9L</strong>
+                </div>
+                <div class="bar-row bar-row--kaavu" role="listitem">
+                  <span>Muchilottu Kavu - Iritty</span>
+                  <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill--rank5" style="width: 39%"></div></div>
+                  <strong>INR 1.5L</strong>
+                </div>
+              </div>
+              <div class="chart-footer">
+                <span class="status approved">Leader: Taliparamba</span>
+                <strong>Top 5 total: INR 12.5L</strong>
+              </div>
+            </article>
+          </section>
+
+        </div>
+      </main>
+    </div>
+
+    <script src="demo-flow.js"></script>
+  </body>
+</html>

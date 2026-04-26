@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Application Submitted</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header class="public-header">
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          MDB Membership
+        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+        </nav>
+        <details class="mobile-nav-wrap">
+          <summary class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav-mobile">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content" class="public-main">
+
+      <section class="section card" aria-labelledby="status-heading">
+        <div class="status-display">
+          <div class="status-icon status-icon--pending" role="img" aria-label="Application pending">⏳</div>
+          <h1 id="status-heading">Application Submitted!</h1>
+          <p style="max-width:520px;margin:8px auto 20px;">
+            Thank you for registering with MDB. Your membership request has been received
+            and is currently under committee verification.
+          </p>
+          <span class="status pending">Status: Pending Committee Approval</span>
+        </div>
+      </section>
+
+      <section class="section grid-2">
+        <article class="card">
+          <h3 class="card-heading">What Happens Next</h3>
+          <ul class="comm-list">
+            <li>Confirmation email sent to your registered email address</li>
+            <li>Application has been added to the committee approval queue</li>
+            <li>Approval notification will be sent via email once reviewed</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="card-heading">Estimated Timeline</h3>
+          <p>Typical review time: <strong>1–3 working days</strong> after payment verification.</p>
+          <p style="margin-bottom:16px;">You will receive a notification once your membership is confirmed by the committee.</p>
+          <a class="btn btn-accent" href="committee-approval.html">View Committee Approval Flow</a>
+        </article>
+      </section>
+
+      <section class="section card" style="text-align:center;">
+        <a class="btn btn-primary" href="index.html">← Return to Website</a>
+      </section>
+
+    </main>
+  </body>
+</html>

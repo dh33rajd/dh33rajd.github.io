@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Admin Kaavu Detail</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to portal content</a>
+
+    <div class="portal-layout">
+
+      <aside class="sidebar" aria-label="Committee navigation">
+        <div class="sidebar-inner">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            MDB Committee
+          </div>
+          <nav class="menu" aria-label="Admin menu">
+            <a href="admin-dashboard.html">
+              <em class="menu-icon" aria-hidden="true">⊞</em> Dashboard
+            </a>
+            <a class="active" href="admin-kaavu-management.html" aria-current="page">
+              <em class="menu-icon" aria-hidden="true">⛩</em> Kaavu Management
+            </a>
+            <a href="admin-events.html">
+              <em class="menu-icon" aria-hidden="true">◷</em> Event Management
+            </a>
+            <a href="admin-payment-reports.html">
+              <em class="menu-icon" aria-hidden="true">◈</em> Financial Overview
+            </a>
+            <a href="admin-members.html">
+              <em class="menu-icon" aria-hidden="true">◉</em> Members
+            </a>
+            <a href="admin-approvals.html">
+              <em class="menu-icon" aria-hidden="true">✓</em> Approvals
+            </a>
+          </nav>
+        </div>
+        <div class="sidebar-logout">
+          <a href="index.html">
+            <em class="menu-icon" aria-hidden="true">↩</em> Logout
+          </a>
+        </div>
+      </aside>
+
+      <main id="main-content" class="portal-content">
+        <div class="portal-main">
+
+          <section class="portal-top">
+            <div>
+              <h3>Kaavu Profile</h3>
+              <p>Detailed admin view of kaavu information and stats.</p>
+            </div>
+            <a class="btn btn-ghost" href="admin-kaavu-management.html">← Back to Kaavu Management</a>
+          </section>
+
+          <section class="card kaavu-hero" aria-labelledby="admin-kaavu-heading">
+            <h1 id="admin-kaavu-heading">Muchilottu Kavu - Taliparamba</h1>
+            <p>
+              Committee admins can review kaavu profile, coverage, and member activity summaries here.
+            </p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+              <span class="badge">Region: Kannur North</span>
+              <span class="badge">Registered Members: 325</span>
+              <span class="badge">Festival Season: May–June</span>
+            </div>
+          </section>
+
+          <section class="section grid-2">
+            <article class="card">
+              <h3 class="card-heading">About This Kaavu</h3>
+              <p>
+                History, contact committee, location map, and key temple information
+                can be managed here by the committee. This view provides an overview of
+                kaavu-specific data and member activity.
+              </p>
+              <ul class="list">
+                <li>Committee contact: Raghavan N — +91 98765 10234</li>
+                <li>Location: Taliparamba, Kannur North</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card-heading">Upcoming Festivals</h3>
+              <ul class="comm-list">
+                <li>Theyyam event — May 12</li>
+                <li>Pooja special — May 25</li>
+                <li>Annual celebration — June 06</li>
+              </ul>
+            </article>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

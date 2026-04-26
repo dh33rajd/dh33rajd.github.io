@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Choose Membership Plan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header class="public-header">
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          MDB Membership
+        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+        </nav>
+        <details class="mobile-nav-wrap">
+          <summary class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav-mobile">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content" class="public-main">
+
+      <div class="step-bar" role="list" aria-label="Registration steps">
+        <div class="step-item completed" role="listitem">
+          <div class="step-num">✓</div>
+          <span class="step-label">Account Setup</span>
+        </div>
+        <div class="step-connector completed" aria-hidden="true"></div>
+        <div class="step-item completed" role="listitem">
+          <div class="step-num">✓</div>
+          <span class="step-label">Contact Details</span>
+        </div>
+        <div class="step-connector completed" aria-hidden="true"></div>
+        <div class="step-item active" role="listitem" aria-current="step">
+          <div class="step-num">3</div>
+          <span class="step-label">Membership Plan</span>
+        </div>
+        <div class="step-connector" aria-hidden="true"></div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">4</div>
+          <span class="step-label">Payment</span>
+        </div>
+      </div>
+
+      <section class="section card">
+        <h1>Choose Your Membership Plan</h1>
+        <p style="margin:0;">Select the membership plan that best suits your commitment to the community.</p>
+      </section>
+
+      <section class="section plan-grid" role="radiogroup" aria-label="Membership plan options">
+
+        <article class="plan-card" data-plan="yearly200" tabindex="0" role="radio" aria-checked="false">
+          <h3>Yearly Membership</h3>
+          <div class="price">INR 200</div>
+          <p class="muted-small">Renewal required every year.</p>
+          <ul class="plan-features">
+            <li>Member portal access</li>
+            <li>Event &amp; festival updates</li>
+            <li>Kaavu community updates</li>
+          </ul>
+        </article>
+
+        <article class="plan-card" data-plan="yearly1000" tabindex="0" role="radio" aria-checked="false">
+          <h3>Yearly Premium</h3>
+          <div class="price">INR 1,000</div>
+          <p class="muted-small">Renewal required every year.</p>
+          <ul class="plan-features">
+            <li>All basic plan benefits</li>
+            <li>Priority committee notice</li>
+            <li>Contribution management</li>
+          </ul>
+        </article>
+
+        <article class="plan-card" data-plan="lifetime" tabindex="0" role="radio" aria-checked="false">
+          <h3>Lifetime Membership</h3>
+          <div class="price">INR 10,000</div>
+          <p class="muted-small">One-time payment, no yearly renewal.</p>
+          <ul class="plan-features">
+            <li>All premium plan benefits</li>
+            <li>Permanent member status</li>
+            <li>No renewal required ever</li>
+          </ul>
+        </article>
+
+      </section>
+
+      <section class="section card">
+        <div id="selected-plan-text" class="plan-selected-bar" aria-live="polite">No plan selected — click a plan above to choose.</div>
+        <div class="form-actions" style="margin-top:0;">
+          <a id="continue-plan" class="btn btn-primary" href="membership-payment.html">Continue to Payment →</a>
+          <a class="btn btn-ghost" href="registration-details.html">← Back</a>
+        </div>
+        <div id="plan-error" class="alert-box" role="alert" aria-live="polite"></div>
+      </section>
+
+    </main>
+    <script src="demo-flow.js"></script>
+  </body>
+</html>
