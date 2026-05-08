@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MDB — Contact Details</title>
+    <title>MDB — Member Details</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -41,7 +41,7 @@
         <div class="step-connector completed" aria-hidden="true"></div>
         <div class="step-item active" role="listitem" aria-current="step">
           <div class="step-num">2</div>
-          <span class="step-label">Contact Details</span>
+          <span class="step-label">Member Details</span>
         </div>
         <div class="step-connector" aria-hidden="true"></div>
         <div class="step-item" role="listitem">
@@ -56,40 +56,133 @@
       </div>
 
       <section class="section card">
-        <h1>Contact &amp; Kaavu Details</h1>
-        <p style="margin:0;">Add your mobile number, address, and preferred kaavu association.
+        <h1>Personal &amp; Contact Details</h1>
+        <p style="margin:0;">Fill in your personal information, address, and kaavu association.
           <br>Account Holder: <strong id="details-full-name">-</strong>
         </p>
       </section>
 
-      <section class="section card" aria-labelledby="contact-form-heading">
-        <h3 id="contact-form-heading">Contact Information</h3>
+      <!-- ── Step 1: Membership Type ──────────────────────────────── -->
+      <section class="section card" aria-labelledby="membership-type-heading">
+        <h3 id="membership-type-heading">Membership Type</h3>
+        <p style="margin-bottom:16px;">Choose the membership category that applies to you.</p>
+        <div class="membership-type-grid" id="membership-type-grid">
+          <label class="membership-type-card selected" id="card-individual">
+            <input type="radio" name="membershipType" value="individual" id="type-individual" checked />
+            <div class="membership-type-icon">👤</div>
+            <h4>Individual</h4>
+            <p>Single member registration. For individuals who are 18+ years of age.</p>
+          </label>
+          <label class="membership-type-card" id="card-family">
+            <input type="radio" name="membershipType" value="family" id="type-family" />
+            <div class="membership-type-icon">👨‍👩‍👧‍👦</div>
+            <h4>Family</h4>
+            <p>Register your family under one membership. Add details for each family member.</p>
+          </label>
+        </div>
+      </section>
+
+      <!-- ── Step 2: Personal Information ──────────────────────────── -->
+      <section class="section card" aria-labelledby="personal-info-heading">
+        <h3 id="personal-info-heading">Personal Information</h3>
         <form id="registration-form" novalidate>
           <div class="form-grid">
+
+            <div class="form-group">
+              <label for="age">Age <span aria-hidden="true" style="color:var(--danger);">*</span></label>
+              <input class="input" id="age" type="number" min="1" max="120" placeholder="Enter your age" required />
+              <div class="eligibility-notice" id="age-notice" role="alert">
+                ⚠️ You must be at least 18 years old to apply for MDB membership.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="relationshipStatus">Relationship Status <span aria-hidden="true" style="color:var(--danger);">*</span></label>
+              <select class="select" id="relationshipStatus" required>
+                <option value="">Select status</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="widowed">Widowed</option>
+                <option value="divorced">Divorced</option>
+                <option value="separated">Separated</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="occupation">Occupation <span aria-hidden="true" style="color:var(--danger);">*</span></label>
+              <input class="input" id="occupation" type="text" placeholder="e.g. Farmer, Teacher, Business" required />
+            </div>
+
+            <div class="form-group">
+              <label for="familyName">Family Name (Tharavadu / House Name) <span aria-hidden="true" style="color:var(--danger);">*</span></label>
+              <input class="input" id="familyName" type="text" placeholder="Enter your family / house name" required />
+            </div>
+
             <div class="form-group">
               <label for="phone">Phone Number <span aria-hidden="true" style="color:var(--danger);">*</span></label>
               <input class="input" id="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required />
             </div>
+
+          </div>
+
+          <!-- ── Contact / Address ──────────────────────────────────── -->
+          <h3 style="margin:24px 0 16px;">Address Details</h3>
+          <div class="form-grid">
+
             <div class="form-group">
               <label for="houseStreet">House / Street</label>
               <input class="input" id="houseStreet" type="text" placeholder="House name, street name" autocomplete="address-line1" />
             </div>
+
             <div class="form-group">
-              <label for="areaLocality">Area / Locality</label>
+              <label for="areaLocality">Location / Area</label>
               <input class="input" id="areaLocality" type="text" placeholder="Area or locality" autocomplete="address-line2" />
             </div>
+
             <div class="form-group">
               <label for="district">District</label>
               <input class="input" id="district" type="text" placeholder="Kannur" autocomplete="address-level2" />
             </div>
+
             <div class="form-group">
-              <label for="state">State</label>
-              <input class="input" id="state" type="text" placeholder="Kerala" autocomplete="address-level1" />
+              <label for="state">State of Residence <span aria-hidden="true" style="color:var(--danger);">*</span></label>
+              <select class="select" id="state" required>
+                <option value="">Select state</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Goa">Goa</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Other">Other State</option>
+              </select>
             </div>
+
+            <div class="form-group">
+              <label for="country">Country <span aria-hidden="true" style="color:var(--danger);">*</span></label>
+              <select class="select" id="country" required>
+                <option value="">Select country</option>
+                <option value="India" selected>India</option>
+                <option value="UAE">UAE</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Oman">Oman</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="UK">United Kingdom</option>
+                <option value="USA">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
             <div class="form-group">
               <label for="pinCode">PIN Code</label>
-              <input class="input" id="pinCode" type="text" placeholder="670001" autocomplete="postal-code" maxlength="6" />
+              <input class="input" id="pinCode" type="text" placeholder="670001" autocomplete="postal-code" maxlength="10" />
             </div>
+
             <div class="form-group">
               <label for="kaavu">Select Nearby Kaavu <span aria-hidden="true" style="color:var(--danger);">*</span></label>
               <select class="select" id="kaavu" required>
@@ -98,11 +191,28 @@
                 <option>Muchilottu Kavu - Payyanur</option>
                 <option>Muchilottu Kavu - Azhikode</option>
                 <option>Muchilottu Kavu - Pappinisseri</option>
+                <option>Muchilottu Kavu - Mattannur</option>
+                <option>Muchilottu Kavu - Iritty</option>
+                <option>Muchilottu Kavu - Peravoor</option>
               </select>
             </div>
+
           </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Continue to Membership Plan →</button>
+
+          <!-- ── Family Member Details (Family membership only) ──────── -->
+          <div id="family-section" style="display:none;">
+            <h3 style="margin:24px 0 8px;">Family Member Details</h3>
+            <p style="margin-bottom:16px;font-size:0.875rem;color:var(--text-muted);">
+              Add details for each family member to be included under this membership. All added members must be part of the same household.
+            </p>
+            <div class="family-members-section" id="family-members-list">
+              <!-- Rows injected by JS -->
+            </div>
+            <button type="button" class="add-family-btn" id="add-family-btn">+ Add Family Member</button>
+          </div>
+
+          <div class="form-actions" style="margin-top:28px;">
+            <button type="submit" class="btn btn-primary" id="details-submit-btn">Continue to Membership Plan →</button>
             <a class="btn btn-ghost" href="registration-account.html">← Back</a>
           </div>
           <div id="details-error" class="alert-box" role="alert" aria-live="polite"></div>

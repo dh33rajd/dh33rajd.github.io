@@ -91,8 +91,128 @@ function initDetailsPage() {
   if (!form) return;
   document.getElementById("details-full-name").textContent = "-";
 
+  // ── Membership type toggle ──────────────────────────────────────────
+  const typeCards = document.querySelectorAll(".membership-type-card");
+  const familySection = document.getElementById("family-section");
+  typeCards.forEach(card => {
+    card.addEventListener("click", () => {
+      typeCards.forEach(c => c.classList.remove("selected"));
+      card.classList.add("selected");
+      const val = card.querySelector("input[type='radio']").value;
+      if (familySection) familySection.style.display = val === "family" ? "block" : "none";
+      if (val === "family" && getFamilyRows().length === 0) addFamilyRow();
+    });
+    // Also fire when the radio changes via keyboard
+    const radio = card.querySelector("input[type='radio']");
+    radio.addEventListener("change", () => card.click());
+  });
+
+  // ── Age eligibility ─────────────────────────────────────────────────
+  const ageInput = document.getElementById("age");
+  const ageNotice = document.getElementById("age-notice");
+  const submitBtn = document.getElementById("details-submit-btn");
+
+  function checkAge() {
+    const val = parseInt(ageInput.value, 10);
+    if (ageInput.value && val < 18) {
+      ageNotice.classList.add("visible");
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = "0.5";
+    } else {
+      ageNotice.classList.remove("visible");
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = "";
+    }
+  }
+  if (ageInput) ageInput.addEventListener("input", checkAge);
+
+  // ── Family member rows ──────────────────────────────────────────────
+  const familyList = document.getElementById("family-members-list");
+  const addFamilyBtn = document.getElementById("add-family-btn");
+  let familyRowCount = 0;
+
+  function getFamilyRows() {
+    return familyList ? Array.from(familyList.querySelectorAll(".family-member-row")) : [];
+  }
+
+  function addFamilyRow() {
+    if (!familyList) return;
+    familyRowCount++;
+    const idx = familyRowCount;
+    const row = document.createElement("div");
+    row.className = "family-member-row";
+    row.setAttribute("data-idx", idx);
+    row.innerHTML = `
+      <div class="form-group" style="margin:0;">
+        <label for="fam-name-${idx}">Member ${idx} – Full Name</label>
+        <input class="input" id="fam-name-${idx}" type="text" placeholder="Full name" />
+      </div>
+      <div class="form-group" style="margin:0;">
+        <label for="fam-age-${idx}">Age</label>
+        <input class="input" id="fam-age-${idx}" type="number" min="0" max="120" placeholder="Age" />
+      </div>
+      <button type="button" class="remove-family-btn" aria-label="Remove member ${idx}">✕</button>
+    `;
+    row.querySelector(".remove-family-btn").addEventListener("click", () => row.remove());
+    familyList.appendChild(row);
+  }
+
+  if (addFamilyBtn) addFamilyBtn.addEventListener("click", addFamilyRow);
+
+  // ── Form submit ─────────────────────────────────────────────────────
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    const errorEl = document.getElementById("details-error");
+    errorEl.textContent = "";
+
+    const age = parseInt(document.getElementById("age").value, 10);
+    if (!age || age < 18) {
+      errorEl.textContent = "Age must be 18 or above to apply for membership.";
+      ageNotice.classList.add("visible");
+      return;
+    }
+
+    const kaavu = document.getElementById("kaavu").value;
+    const phone = document.getElementById("phone").value.trim();
+    const state = document.getElementById("state").value;
+    const country = document.getElementById("country").value;
+    const occupation = document.getElementById("occupation").value.trim();
+    const familyName = document.getElementById("familyName").value.trim();
+
+    if (!phone || !kaavu || !state || !country || !occupation || !familyName) {
+      errorEl.textContent = "Please fill in all required fields.";
+      return;
+    }
+
+    const membershipType = document.querySelector("input[name='membershipType']:checked")?.value || "individual";
+
+    // Collect family members if family membership
+    const familyMembers = [];
+    if (membershipType === "family") {
+      getFamilyRows().forEach(row => {
+        const idx = row.getAttribute("data-idx");
+        const name = row.querySelector(`#fam-name-${idx}`)?.value.trim();
+        const famAge = row.querySelector(`#fam-age-${idx}`)?.value;
+        if (name) familyMembers.push({ name, age: famAge || "" });
+      });
+    }
+
+    setData({
+      kaavu,
+      phone,
+      state,
+      country,
+      occupation,
+      familyName,
+      membershipType,
+      familyMembers,
+      age,
+      relationshipStatus: document.getElementById("relationshipStatus").value,
+      houseStreet: document.getElementById("houseStreet").value.trim(),
+      areaLocality: document.getElementById("areaLocality").value.trim(),
+      district: document.getElementById("district").value.trim(),
+      pinCode: document.getElementById("pinCode").value.trim(),
+    });
     window.location.href = "register-flow.html";
   });
 }
