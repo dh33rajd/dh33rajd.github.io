@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Member Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header class="public-header">
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          MDB Portal
+        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="registration-account.html" class="btn btn-primary btn-sm">Become a Member</a>
+        </nav>
+        <details class="mobile-nav-wrap">
+          <summary class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav-mobile">
+            <a href="index.html">Home</a>
+            <a href="registration-account.html" class="btn btn-primary btn-sm">Become a Member</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content" class="public-main auth-wrap">
+      <section class="auth-card" aria-labelledby="login-heading">
+
+        <div class="auth-logo">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <h2 id="login-heading">Welcome Back</h2>
+          <p>Sign in to your MDB portal account</p>
+        </div>
+
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="login-identifier">Email or Phone</label>
+            <input
+              id="login-identifier"
+              class="input"
+              type="text"
+              placeholder="Enter email or phone number"
+              autocomplete="username"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input
+              id="login-password"
+              class="input"
+              type="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+            />
+          </div>
+
+          <div class="inline-row">
+            <label class="checkbox-row">
+              <input type="checkbox" id="remember-me" />
+              Remember me
+            </label>
+            <button type="button" id="forgot-password" class="link-btn">Forgot Password?</button>
+          </div>
+
+          <div class="form-actions">
+            <button id="login-submit" type="submit" class="btn btn-primary" style="width:100%;">Login</button>
+          </div>
+
+          <div id="login-error" class="alert-box" role="alert" aria-live="polite"></div>
+        </form>
+
+        <p style="text-align:center;margin-top:20px;margin-bottom:0;font-size:0.875rem;">
+          Not a member yet?
+          <a href="registration-account.html">Register here</a>
+        </p>
+
+      </section>
+    </main>
+
+    <script src="demo-flow.js"></script>
+  </body>
+</html>

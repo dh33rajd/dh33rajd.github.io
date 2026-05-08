@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Total Members</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to portal content</a>
+
+    <div class="portal-layout">
+
+      <aside class="sidebar" aria-label="Committee navigation">
+        <div class="sidebar-inner">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            MDB Committee
+          </div>
+          <nav class="menu" aria-label="Admin menu">
+            <a href="admin-dashboard.html">
+              <em class="menu-icon" aria-hidden="true">⊞</em> Dashboard
+            </a>
+            <a href="admin-kaavu-management.html">
+              <em class="menu-icon" aria-hidden="true">⛩</em> Kaavu Management
+            </a>
+            <a href="admin-events.html">
+              <em class="menu-icon" aria-hidden="true">◷</em> Event Management
+            </a>
+            <a href="admin-payment-reports.html">
+              <em class="menu-icon" aria-hidden="true">◈</em> Financial Overview
+            </a>
+            <a class="active" href="admin-members.html" aria-current="page">
+              <em class="menu-icon" aria-hidden="true">◉</em> Members
+            </a>
+            <a href="admin-approvals.html">
+              <em class="menu-icon" aria-hidden="true">✓</em> Approvals
+            </a>
+          </nav>
+        </div>
+        <div class="sidebar-logout">
+          <a href="index.html">
+            <em class="menu-icon" aria-hidden="true">↩</em> Logout
+          </a>
+        </div>
+      </aside>
+
+      <main id="main-content" class="portal-content">
+        <div class="portal-main">
+
+          <section class="portal-top">
+            <div>
+              <h3>Total Members</h3>
+              <p>Click any row to open the member's profile details.</p>
+            </div>
+            <span class="badge">2,486 Members</span>
+          </section>
+
+          <section class="section card" aria-labelledby="members-table-heading">
+            <h3 id="members-table-heading" class="sr-only">Member list</h3>
+
+            <div class="table-toolbar" role="search" aria-label="Filter members">
+              <div class="form-group">
+                <label for="mem-search" class="sr-only">Search by member ID, name, or phone</label>
+                <input id="mem-search" class="input" type="text" placeholder="Search by member ID, name, phone…" />
+              </div>
+              <div class="form-group">
+                <label for="mem-kaavu" class="sr-only">Filter by Kaavu</label>
+                <select id="mem-kaavu" class="select">
+                  <option>All Kaavu</option>
+                  <option>Muchilottu Kavu - Taliparamba</option>
+                  <option>Muchilottu Kavu - Payyanur</option>
+                  <option>Muchilottu Kavu - Azhikode</option>
+                  <option>Muchilottu Kavu - Pappinisseri</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mem-status" class="sr-only">Filter by status</label>
+                <select id="mem-status" class="select">
+                  <option>Status: All</option>
+                  <option>Status: Active</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mem-sort" class="sr-only">Sort order</label>
+                <select id="mem-sort" class="select">
+                  <option>Sort: Newest First</option>
+                  <option>Sort: Oldest First</option>
+                  <option>Sort: Name A–Z</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="button">Apply</button>
+              <button class="btn btn-ghost" type="button">Reset</button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table" role="table" aria-label="Members list — click row to view profile">
+                <thead>
+                  <tr>
+                    <th scope="col">Member ID</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Kaavu</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="clickable-row" data-href="admin-member-profile.html"><td>MDB-2026-01427</td><td>Harikrishnan M</td><td>+91 98765 43210</td><td>Muchilottu Kavu - Taliparamba</td><td><span class="status approved">Active</span></td></tr>
+                  <tr class="clickable-row" data-href="admin-member-profile.html"><td>MDB-2026-01428</td><td>Meera P</td><td>+91 98950 21567</td><td>Muchilottu Kavu - Payyanur</td><td><span class="status approved">Active</span></td></tr>
+                  <tr class="clickable-row" data-href="admin-member-profile.html"><td>MDB-2026-01429</td><td>Suresh N</td><td>+91 98470 10456</td><td>Muchilottu Kavu - Azhikode</td><td><span class="status approved">Active</span></td></tr>
+                  <tr class="clickable-row" data-href="admin-member-profile.html"><td>MDB-2026-01430</td><td>Anjana K</td><td>+91 99610 66321</td><td>Muchilottu Kavu - Pappinisseri</td><td><span class="status approved">Active</span></td></tr>
+                  <tr class="clickable-row" data-href="admin-member-profile.html"><td>MDB-2026-01431</td><td>Ratheesh V</td><td>+91 95265 99821</td><td>Muchilottu Kavu - Taliparamba</td><td><span class="status approved">Active</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+
+    <script>
+      document.querySelectorAll(".clickable-row").forEach((row) => {
+        row.addEventListener("click", () => {
+          window.location.href = row.dataset.href;
+        });
+      });
+    </script>
+  </body>
+</html>

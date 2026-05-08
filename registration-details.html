@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Contact Details</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header class="public-header">
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          MDB Registration
+        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+        </nav>
+        <details class="mobile-nav-wrap">
+          <summary class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav-mobile">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content" class="public-main">
+
+      <div class="step-bar" role="list" aria-label="Registration steps">
+        <div class="step-item completed" role="listitem">
+          <div class="step-num">✓</div>
+          <span class="step-label">Account Setup</span>
+        </div>
+        <div class="step-connector completed" aria-hidden="true"></div>
+        <div class="step-item active" role="listitem" aria-current="step">
+          <div class="step-num">2</div>
+          <span class="step-label">Contact Details</span>
+        </div>
+        <div class="step-connector" aria-hidden="true"></div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">3</div>
+          <span class="step-label">Membership Plan</span>
+        </div>
+        <div class="step-connector" aria-hidden="true"></div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">4</div>
+          <span class="step-label">Payment</span>
+        </div>
+      </div>
+
+      <section class="section card">
+        <h1>Contact &amp; Kaavu Details</h1>
+        <p style="margin:0;">Add your mobile number, address, and preferred kaavu association.
+          <br>Account Holder: <strong id="details-full-name">-</strong>
+        </p>
+      </section>
+
+      <section class="section card" aria-labelledby="contact-form-heading">
+        <h3 id="contact-form-heading">Contact Information</h3>
+        <form id="registration-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="phone">Phone Number <span aria-hidden="true" style="color:var(--danger);">*</span></label>
+              <input class="input" id="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required />
+            </div>
+            <div class="form-group">
+              <label for="houseStreet">House / Street</label>
+              <input class="input" id="houseStreet" type="text" placeholder="House name, street name" autocomplete="address-line1" />
+            </div>
+            <div class="form-group">
+              <label for="areaLocality">Area / Locality</label>
+              <input class="input" id="areaLocality" type="text" placeholder="Area or locality" autocomplete="address-line2" />
+            </div>
+            <div class="form-group">
+              <label for="district">District</label>
+              <input class="input" id="district" type="text" placeholder="Kannur" autocomplete="address-level2" />
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+              <input class="input" id="state" type="text" placeholder="Kerala" autocomplete="address-level1" />
+            </div>
+            <div class="form-group">
+              <label for="pinCode">PIN Code</label>
+              <input class="input" id="pinCode" type="text" placeholder="670001" autocomplete="postal-code" maxlength="6" />
+            </div>
+            <div class="form-group">
+              <label for="kaavu">Select Nearby Kaavu <span aria-hidden="true" style="color:var(--danger);">*</span></label>
+              <select class="select" id="kaavu" required>
+                <option value="">Choose kaavu</option>
+                <option>Muchilottu Kavu - Taliparamba</option>
+                <option>Muchilottu Kavu - Payyanur</option>
+                <option>Muchilottu Kavu - Azhikode</option>
+                <option>Muchilottu Kavu - Pappinisseri</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Continue to Membership Plan →</button>
+            <a class="btn btn-ghost" href="registration-account.html">← Back</a>
+          </div>
+          <div id="details-error" class="alert-box" role="alert" aria-live="polite"></div>
+        </form>
+      </section>
+
+    </main>
+    <script src="demo-flow.js"></script>
+  </body>
+</html>

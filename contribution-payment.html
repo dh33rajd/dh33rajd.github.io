@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Contribution Payment</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to portal content</a>
+
+    <div class="portal-layout">
+
+      <aside class="sidebar" aria-label="Member navigation">
+        <div class="sidebar-inner">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            MDB Member
+          </div>
+          <nav class="menu" aria-label="Member menu">
+            <a href="member-dashboard.html">
+              <em class="menu-icon" aria-hidden="true">⊞</em> Dashboard
+            </a>
+            <a href="kaavu-list.html">
+              <em class="menu-icon" aria-hidden="true">⛩</em> Kaavu
+            </a>
+            <a href="events.html">
+              <em class="menu-icon" aria-hidden="true">◷</em> Events
+            </a>
+            <a class="active" href="contribution.html" aria-current="page">
+              <em class="menu-icon" aria-hidden="true">◎</em> Contributions
+            </a>
+            <a href="profile.html">
+              <em class="menu-icon" aria-hidden="true">◉</em> My Profile
+            </a>
+          </nav>
+        </div>
+        <div class="sidebar-logout">
+          <a href="index.html">
+            <em class="menu-icon" aria-hidden="true">↩</em> Logout
+          </a>
+        </div>
+      </aside>
+
+      <main id="main-content" class="portal-content">
+        <div class="portal-main">
+
+          <section class="portal-top">
+            <div>
+              <h3>Contribution Payment</h3>
+              <p>Review your contribution details and confirm payment.</p>
+            </div>
+          </section>
+
+          <section class="section grid-2">
+            <article class="card">
+              <h3 class="card-heading">Contribution Summary</h3>
+              <ul class="info-summary">
+                <li><span class="key">Kaavu</span><span class="val" id="pay-contribution-kaavu">—</span></li>
+                <li><span class="key">Amount</span><span class="val" id="pay-contribution-amount">—</span></li>
+                <li><span class="key">Description</span><span class="val" id="pay-contribution-description">—</span></li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card-heading">Payment Methods Accepted</h3>
+              <div class="payment-methods">
+                <span class="payment-badge">📱 UPI</span>
+                <span class="payment-badge">💳 Debit / Credit Card</span>
+                <span class="payment-badge">🏦 Net Banking</span>
+              </div>
+              <p style="margin:0;font-size:0.875rem;">
+                Your contribution will be credited to the selected kaavu upon successful payment.
+              </p>
+            </article>
+          </section>
+
+          <section class="section card">
+            <div class="form-actions" style="margin-top:0;">
+              <a id="confirm-contribution-payment" class="btn btn-primary btn-lg" href="contribution.html">Confirm &amp; Pay →</a>
+              <a class="btn btn-ghost" href="contribution.html">← Back to Contributions</a>
+            </div>
+            <div id="contribution-payment-error" class="alert-box" role="alert" aria-live="polite"></div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+
+    <script src="demo-flow.js"></script>
+  </body>
+</html>
