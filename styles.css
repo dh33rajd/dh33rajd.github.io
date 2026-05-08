@@ -1404,6 +1404,27 @@ a { color: var(--primary); }
    NEW FEATURE STYLES — v3
    ================================================================ */
 
+/* === Malayalam Font Size Reduction =================================== */
+/* Malayalam script glyphs render visually larger than Latin at the same
+   point size, so we scale them down slightly in ML mode.                */
+[data-lang="ml"] [data-ml] {
+  font-size: 0.88em;
+  line-height: 1.75;
+}
+/* Headings — lighter reduction so they stay impactful */
+[data-lang="ml"] h1[data-ml],
+[data-lang="ml"] h2[data-ml],
+[data-lang="ml"] h3[data-ml],
+[data-lang="ml"] h4[data-ml] {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+/* Nav & compact UI text — tighter still */
+[data-lang="ml"] .nav-links [data-ml]:not(.btn),
+[data-lang="ml"] .nav-mobile [data-ml]:not(.btn) {
+  font-size: 0.78em;
+}
+
 /* === Language Toggle ================================================= */
 .lang-toggle {
   display: flex;
