@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Kaavu Detail</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to portal content</a>
+
+    <div class="portal-layout">
+
+      <aside class="sidebar" aria-label="Member navigation">
+        <div class="sidebar-inner">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            MDB Member
+          </div>
+          <nav class="menu" aria-label="Member menu">
+            <a href="member-dashboard.html">
+              <em class="menu-icon" aria-hidden="true">⊞</em> Dashboard
+            </a>
+            <a class="active" href="kaavu-list.html" aria-current="page">
+              <em class="menu-icon" aria-hidden="true">⛩</em> Kaavu
+            </a>
+            <a href="events.html">
+              <em class="menu-icon" aria-hidden="true">◷</em> Events
+            </a>
+            <a href="contribution.html">
+              <em class="menu-icon" aria-hidden="true">◎</em> Contributions
+            </a>
+            <a href="profile.html">
+              <em class="menu-icon" aria-hidden="true">◉</em> My Profile
+            </a>
+          </nav>
+        </div>
+        <div class="sidebar-logout">
+          <a href="index.html">
+            <em class="menu-icon" aria-hidden="true">↩</em> Logout
+          </a>
+        </div>
+      </aside>
+
+      <main id="main-content" class="portal-content">
+        <div class="portal-main">
+
+          <section class="portal-top">
+            <div>
+              <h3>Kaavu Profile</h3>
+              <p>Detailed view of kaavu information and updates.</p>
+            </div>
+            <a class="btn btn-ghost" href="kaavu-list.html">← Back to Kaavu List</a>
+          </section>
+
+          <section class="card kaavu-hero" aria-labelledby="kaavu-detail-heading">
+            <h1 id="kaavu-detail-heading">Muchilottu Kavu - Taliparamba</h1>
+            <p>
+              Heritage kaavu connected through MDB for festival coordination, member
+              communication, and community support initiatives.
+            </p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+              <span class="badge">Region: Kannur North</span>
+              <span class="badge">Registered Members: 325</span>
+              <span class="badge">Festival Season: May–June</span>
+            </div>
+          </section>
+
+          <section class="section grid-2">
+            <article class="card">
+              <h3 class="card-heading">About This Kaavu</h3>
+              <p>
+                Muchilottu Kavu – Taliparamba is a heritage kaavu in the northern Kannur region
+                with deep cultural significance in the theyyam tradition. The MDB committee
+                coordinates festival logistics, member welfare, and community programs here.
+              </p>
+              <ul class="list">
+                <li>Committee contact: Raghavan N — +91 98765 10234</li>
+                <li>Location: Taliparamba, Kannur North</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card-heading">Upcoming Festivals</h3>
+              <ul class="comm-list">
+                <li>Theyyam event — May 12</li>
+                <li>Pooja special — May 25</li>
+                <li>Annual celebration — June 06</li>
+              </ul>
+            </article>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

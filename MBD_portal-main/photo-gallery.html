@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header class="public-header">
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          MDB Muchilottu Devasam Board
+        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#about-mdb">About MDB</a>
+          <a href="festival-calendar.html">Festivals</a>
+          <a href="live-streaming.html">Live Streaming</a>
+          <a href="archive.html">Archive</a>
+          <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+        </nav>
+        <details class="mobile-nav-wrap">
+          <summary class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav-mobile">
+            <a href="index.html">Home</a>
+            <a href="festival-calendar.html">Festivals</a>
+            <a href="archive.html">Archive</a>
+            <a href="login.html">Login</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content" class="public-main">
+
+      <section class="section card">
+        <h1>📸 Photo Gallery</h1>
+        <p style="margin:0;">A visual journey through theyyam performances, kaavu festivals, community gatherings, and heritage celebrations across Kannur.</p>
+      </section>
+
+      <!-- Filter Tabs -->
+      <section class="section" aria-labelledby="gallery-filter-label">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px;" role="group" aria-label="Gallery filters" id="gallery-filter-label">
+          <button class="btn btn-primary btn-sm gallery-filter active" data-filter="all">All</button>
+          <button class="btn btn-ghost btn-sm gallery-filter" data-filter="theyyam">Theyyam</button>
+          <button class="btn btn-ghost btn-sm gallery-filter" data-filter="festival">Festivals</button>
+          <button class="btn btn-ghost btn-sm gallery-filter" data-filter="kaavu">Kaavu</button>
+          <button class="btn btn-ghost btn-sm gallery-filter" data-filter="community">Community</button>
+        </div>
+      </section>
+
+      <!-- Gallery Grid -->
+      <section class="section" aria-labelledby="gallery-grid-heading">
+        <h2 id="gallery-grid-heading" class="sr-only">Gallery Photos</h2>
+        <div class="gallery-masonry" id="gallery-grid">
+
+          <div class="gallery-item" data-category="theyyam">
+            <div class="gallery-placeholder" style="aspect-ratio:3/4;">🔥</div>
+            <div class="gallery-caption">Muchilottu Bhagavathi Theyyam — Taliparamba, 2026</div>
+          </div>
+          <div class="gallery-item" data-category="festival">
+            <div class="gallery-placeholder" style="aspect-ratio:16/9;">🪔</div>
+            <div class="gallery-caption">Annual Kaavu Festival — Opening Ceremony, 2026</div>
+          </div>
+          <div class="gallery-item" data-category="kaavu">
+            <div class="gallery-placeholder" style="aspect-ratio:3/4;">🌿</div>
+            <div class="gallery-caption">Muchilottu Kavu — Sacred grove and temple, Payyanur</div>
+          </div>
+          <div class="gallery-item" data-category="community">
+            <div class="gallery-placeholder" style="aspect-ratio:4/3;">👥</div>
+            <div class="gallery-caption">MDB Board Meeting — Kannur, January 2026</div>
+          </div>
+          <div class="gallery-item" data-category="theyyam">
+            <div class="gallery-placeholder" style="aspect-ratio:4/3;">🎭</div>
+            <div class="gallery-caption">Theyyam Costume & Headgear — Azhikode, 2025</div>
+          </div>
+          <div class="gallery-item" data-category="festival">
+            <div class="gallery-placeholder" style="aspect-ratio:3/4;">🌟</div>
+            <div class="gallery-caption">Night Festival Illuminations — Pappinisseri, 2025</div>
+          </div>
+          <div class="gallery-item" data-category="community">
+            <div class="gallery-placeholder" style="aspect-ratio:16/9;">🏆</div>
+            <div class="gallery-caption">Member Award Ceremony — Annual MDB Summit, 2025</div>
+          </div>
+          <div class="gallery-item" data-category="kaavu">
+            <div class="gallery-placeholder" style="aspect-ratio:4/3;">🌳</div>
+            <div class="gallery-caption">Sacred Tree at Muchilottu Kavu — Mattannur</div>
+          </div>
+          <div class="gallery-item" data-category="theyyam">
+            <div class="gallery-placeholder" style="aspect-ratio:3/4;">🕯️</div>
+            <div class="gallery-caption">Theyyam Rituals — Pre-dawn ceremony, Iritty, 2025</div>
+          </div>
+          <div class="gallery-item" data-category="festival">
+            <div class="gallery-placeholder" style="aspect-ratio:4/3;">🥁</div>
+            <div class="gallery-caption">Traditional Percussion — Chenda performance at Peravoor</div>
+          </div>
+          <div class="gallery-item" data-category="community">
+            <div class="gallery-placeholder" style="aspect-ratio:16/9;">🤝</div>
+            <div class="gallery-caption">Welfare Distribution Program — Kannur North, 2025</div>
+          </div>
+          <div class="gallery-item" data-category="kaavu">
+            <div class="gallery-placeholder" style="aspect-ratio:3/4;">🪷</div>
+            <div class="gallery-caption">Floral decorations at Muchilottu Kavu — Taliparamba</div>
+          </div>
+
+        </div>
+      </section>
+
+      <div style="text-align:center;padding:24px 0 48px;">
+        <p style="color:var(--text-muted);font-size:0.9rem;">
+          Displaying 12 of 240+ photos. New photos are added after each festival.
+          <br>Members can submit photos through the member portal.
+        </p>
+      </div>
+
+    </main>
+
+    <footer class="footer-bar">
+      © 2026 MDB Muchilottu Devasam Board. All rights reserved.
+    </footer>
+
+    <script>
+      // Filter logic
+      const filters = document.querySelectorAll(".gallery-filter");
+      const items = document.querySelectorAll(".gallery-item");
+      filters.forEach(btn => {
+        btn.addEventListener("click", () => {
+          filters.forEach(b => { b.classList.remove("active", "btn-primary"); b.classList.add("btn-ghost"); });
+          btn.classList.add("active", "btn-primary");
+          btn.classList.remove("btn-ghost");
+          const f = btn.dataset.filter;
+          items.forEach(item => {
+            item.style.display = (f === "all" || item.dataset.category === f) ? "" : "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

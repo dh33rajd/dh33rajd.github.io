@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Event Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to portal content</a>
+
+    <div class="portal-layout">
+
+      <aside class="sidebar" aria-label="Committee navigation">
+        <div class="sidebar-inner">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            MDB Committee
+          </div>
+          <nav class="menu" aria-label="Admin menu">
+            <a href="admin-dashboard.html">
+              <em class="menu-icon" aria-hidden="true">⊞</em> Dashboard
+            </a>
+            <a href="admin-kaavu-management.html">
+              <em class="menu-icon" aria-hidden="true">⛩</em> Kaavu Management
+            </a>
+            <a class="active" href="admin-events.html" aria-current="page">
+              <em class="menu-icon" aria-hidden="true">◷</em> Event Management
+            </a>
+            <a href="admin-payment-reports.html">
+              <em class="menu-icon" aria-hidden="true">◈</em> Financial Overview
+            </a>
+            <a href="admin-members.html">
+              <em class="menu-icon" aria-hidden="true">◉</em> Members
+            </a>
+            <a href="admin-approvals.html">
+              <em class="menu-icon" aria-hidden="true">✓</em> Approvals
+            </a>
+          </nav>
+        </div>
+        <div class="sidebar-logout">
+          <a href="index.html">
+            <em class="menu-icon" aria-hidden="true">↩</em> Logout
+          </a>
+        </div>
+      </aside>
+
+      <main id="main-content" class="portal-content">
+        <div class="portal-main">
+
+          <section class="portal-top">
+            <div>
+              <h3>Event Management</h3>
+              <p>Manage announcements, festival schedules, and kaavu event updates.</p>
+            </div>
+            <span class="badge">16 Scheduled Events</span>
+          </section>
+
+          <section class="section card" aria-labelledby="events-admin-heading">
+            <h3 id="events-admin-heading">Upcoming Events</h3>
+
+            <div class="table-toolbar" role="search" aria-label="Filter events">
+              <div class="form-group">
+                <label for="adm-evt-search" class="sr-only">Search by kaavu, event, or coordinator</label>
+                <input id="adm-evt-search" class="input" type="text" placeholder="Search by kaavu, event, coordinator…" />
+              </div>
+              <div class="form-group">
+                <label for="adm-evt-kaavu" class="sr-only">Filter by Kaavu</label>
+                <select id="adm-evt-kaavu" class="select">
+                  <option>All Kaavu</option>
+                  <option>Taliparamba</option>
+                  <option>Payyanur</option>
+                  <option>Azhikode</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="adm-evt-type" class="sr-only">Filter by event type</label>
+                <select id="adm-evt-type" class="select">
+                  <option>All Event Types</option>
+                  <option>Theyyam</option>
+                  <option>Festival</option>
+                  <option>Pooja</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="adm-evt-sort" class="sr-only">Sort order</label>
+                <select id="adm-evt-sort" class="select">
+                  <option>Sort: Nearest Date</option>
+                  <option>Sort: Farthest Date</option>
+                  <option>Sort: Kaavu A–Z</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="button">Apply</button>
+              <button class="btn btn-ghost" type="button">Reset</button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table" role="table" aria-label="Upcoming events">
+                <thead>
+                  <tr>
+                    <th scope="col">Kaavu</th>
+                    <th scope="col">Event</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Coordinator</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Taliparamba</td>
+                    <td>Theyyam rehearsal and preparation</td>
+                    <td><span class="badge info">May 12</span></td>
+                    <td>Raghavan N</td>
+                    <td>
+                      <button class="btn btn-accent btn-sm" type="button"
+                        data-add-calendar
+                        data-kaavu="Taliparamba"
+                        data-update="Theyyam rehearsal and preparation"
+                        data-date="May 12"
+                        data-coordinator="Raghavan N">
+                        📅 Add to Calendar
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Payyanur</td>
+                    <td>Volunteer orientation for annual festival</td>
+                    <td><span class="badge info">May 18</span></td>
+                    <td>Sajitha P</td>
+                    <td>
+                      <button class="btn btn-accent btn-sm" type="button"
+                        data-add-calendar
+                        data-kaavu="Payyanur"
+                        data-update="Volunteer orientation for annual festival"
+                        data-date="May 18"
+                        data-coordinator="Sajitha P">
+                        📅 Add to Calendar
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Azhikode</td>
+                    <td>Special pooja and prasadam distribution</td>
+                    <td><span class="badge info">May 24</span></td>
+                    <td>Anand V</td>
+                    <td>
+                      <button class="btn btn-accent btn-sm" type="button"
+                        data-add-calendar
+                        data-kaavu="Azhikode"
+                        data-update="Special pooja and prasadam distribution"
+                        data-date="May 24"
+                        data-coordinator="Anand V">
+                        📅 Add to Calendar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+
+    <script>
+      function parseEventDate(dateLabel) {
+        const currentYear = new Date().getFullYear();
+        const parsed = new Date(dateLabel + " " + currentYear);
+        return parsed;
+      }
+
+      function formatIcsDate(date) {
+        const y = date.getFullYear();
+        const m = String(date.getMonth() + 1).padStart(2, "0");
+        const d = String(date.getDate()).padStart(2, "0");
+        return "" + y + m + d;
+      }
+
+      function buildIcsContent(eventTitle, eventDate, description, location) {
+        const startDate = formatIcsDate(eventDate);
+        const end = new Date(eventDate);
+        end.setDate(end.getDate() + 1);
+        const endDate = formatIcsDate(end);
+        const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d+Z$/, "Z");
+        const uid = eventTitle.replace(/\s+/g, "-").toLowerCase() + "-" + startDate + "@mdb-events";
+
+        return [
+          "BEGIN:VCALENDAR",
+          "VERSION:2.0",
+          "CALSCALE:GREGORIAN",
+          "PRODID:-//MDB Portal//Events//EN",
+          "BEGIN:VEVENT",
+          "UID:" + uid,
+          "DTSTAMP:" + stamp,
+          "DTSTART;VALUE=DATE:" + startDate,
+          "DTEND;VALUE=DATE:" + endDate,
+          "SUMMARY:" + eventTitle,
+          "DESCRIPTION:" + description,
+          "LOCATION:" + location,
+          "END:VEVENT",
+          "END:VCALENDAR",
+        ].join("\r\n");
+      }
+
+      document.querySelectorAll("[data-add-calendar]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          const kaavu = button.dataset.kaavu;
+          const updateText = button.dataset.update;
+          const dateText = button.dataset.date;
+          const coordinator = button.dataset.coordinator || "TBA";
+          const eventDate = parseEventDate(dateText);
+          if (Number.isNaN(eventDate.getTime())) return;
+
+          const title = "MDB Event - " + kaavu;
+          const description = updateText + " (" + dateText + ") - Coordinator: " + coordinator;
+          const location = kaavu + ", Kannur";
+          const ics = buildIcsContent(title, eventDate, description, location);
+          const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+          const url = URL.createObjectURL(blob);
+          const anchor = document.createElement("a");
+          anchor.href = url;
+          anchor.download = "mdb-event-" + kaavu.toLowerCase() + "-" + formatIcsDate(eventDate) + ".ics";
+          document.body.appendChild(anchor);
+          anchor.click();
+          anchor.remove();
+          URL.revokeObjectURL(url);
+        });
+      });
+    </script>
+  </body>
+</html>

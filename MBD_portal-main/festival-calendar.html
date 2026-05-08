@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Festival Calendar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header class="public-header">
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          MDB Muchilottu Devasam Board
+        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="photo-gallery.html">Gallery</a>
+          <a href="archive.html">Archive</a>
+          <a href="live-streaming.html">Live Streaming</a>
+          <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+        </nav>
+        <details class="mobile-nav-wrap">
+          <summary class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav-mobile">
+            <a href="index.html">Home</a>
+            <a href="photo-gallery.html">Gallery</a>
+            <a href="archive.html">Archive</a>
+            <a href="login.html">Login</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content" class="public-main">
+
+      <section class="section card">
+        <h1>🗓️ Festival Calendar 2026</h1>
+        <p style="margin:0;">Upcoming theyyam performances, kaavu festivals, and MDB community events across Kannur. Dates are subject to the Malayalam lunar calendar.</p>
+      </section>
+
+      <!-- Month filter -->
+      <section class="section" aria-label="Filter by month">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;" role="group" aria-label="Month filters">
+          <button class="btn btn-primary btn-sm fest-filter active" data-month="all">All</button>
+          <button class="btn btn-ghost btn-sm fest-filter" data-month="May">May</button>
+          <button class="btn btn-ghost btn-sm fest-filter" data-month="Jun">Jun</button>
+          <button class="btn btn-ghost btn-sm fest-filter" data-month="Jul">Jul</button>
+          <button class="btn btn-ghost btn-sm fest-filter" data-month="Aug">Aug</button>
+          <button class="btn btn-ghost btn-sm fest-filter" data-month="Sep">Sep</button>
+          <button class="btn btn-ghost btn-sm fest-filter" data-month="Oct">Oct</button>
+          <button class="btn btn-ghost btn-sm fest-filter" data-month="Nov">Nov</button>
+          <button class="btn btn-ghost btn-sm fest-filter" data-month="Dec">Dec</button>
+        </div>
+      </section>
+
+      <!-- Festival Cards -->
+      <section class="section" aria-labelledby="festivals-list-heading">
+        <h2 id="festivals-list-heading" class="sr-only">Upcoming Festivals</h2>
+        <div class="festival-grid" id="festival-grid">
+
+          <div class="festival-card" data-month="May">
+            <div class="festival-card-header">
+              <div class="festival-date-badge">
+                <div class="fday">14</div>
+                <div class="fmon">May</div>
+              </div>
+              <div>
+                <h4>Muchilottu Bhagavathi Theyyam</h4>
+                <p>Taliparamba Kavu, Kannur North</p>
+              </div>
+            </div>
+            <div class="festival-card-body">
+              <p>Annual Muchilottu Bhagavathi theyyam performance lasting 3 days. Traditional rituals, music, and community feast (sadya) are organized for devotees.</p>
+              <div class="festival-meta">
+                <span>📍 Taliparamba</span>
+                <span>⏰ 6:00 AM – 10:00 PM</span>
+                <span>📅 3 Days</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="festival-card" data-month="May">
+            <div class="festival-card-header">
+              <div class="festival-date-badge">
+                <div class="fday">22</div>
+                <div class="fmon">May</div>
+              </div>
+              <div>
+                <h4>Kavu Puja — Payyanur</h4>
+                <p>Muchilottu Kavu, Payyanur</p>
+              </div>
+            </div>
+            <div class="festival-card-body">
+              <p>Annual kavu puja ceremony at Payyanur branch with special offerings, lamp-lighting, and prayers led by the kavu committee.</p>
+              <div class="festival-meta">
+                <span>📍 Payyanur</span>
+                <span>⏰ 5:30 AM – 2:00 PM</span>
+                <span>📅 1 Day</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="festival-card" data-month="Jun">
+            <div class="festival-card-header">
+              <div class="festival-date-badge">
+                <div class="fday">08</div>
+                <div class="fmon">Jun</div>
+              </div>
+              <div>
+                <h4>Theyyam — Vishu Special Celebration</h4>
+                <p>Azhikode Kavu, Kannur</p>
+              </div>
+            </div>
+            <div class="festival-card-body">
+              <p>Special theyyam celebration marking the Vishu new year season at Azhikode. Community members from all affiliated kaavus are invited to attend.</p>
+              <div class="festival-meta">
+                <span>📍 Azhikode</span>
+                <span>⏰ 4:00 AM – 8:00 PM</span>
+                <span>📅 2 Days</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="festival-card" data-month="Jul">
+            <div class="festival-card-header">
+              <div class="festival-date-badge">
+                <div class="fday">18</div>
+                <div class="fmon">Jul</div>
+              </div>
+              <div>
+                <h4>MDB Annual Member Convention</h4>
+                <p>Kannur Town Hall, Kannur</p>
+              </div>
+            </div>
+            <div class="festival-card-body">
+              <p>Annual membership convention with cultural program, awards ceremony, welfare fund presentations, and networking for all MDB members across Kannur.</p>
+              <div class="festival-meta">
+                <span>📍 Kannur Town Hall</span>
+                <span>⏰ 9:00 AM – 6:00 PM</span>
+                <span>📅 1 Day</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="festival-card" data-month="Aug">
+            <div class="festival-card-header">
+              <div class="festival-date-badge">
+                <div class="fday">03</div>
+                <div class="fmon">Aug</div>
+              </div>
+              <div>
+                <h4>Onam Kaavu Decorations Festival</h4>
+                <p>Pappinisseri Kavu, Kannur</p>
+              </div>
+            </div>
+            <div class="festival-card-body">
+              <p>Traditional Onam celebrations at Pappinisseri Kavu with pookalam competitions, theyyam mini-performance, and community feast for all devotees.</p>
+              <div class="festival-meta">
+                <span>📍 Pappinisseri</span>
+                <span>⏰ 7:00 AM – 9:00 PM</span>
+                <span>📅 2 Days</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="festival-card" data-month="Sep">
+            <div class="festival-card-header">
+              <div class="festival-date-badge">
+                <div class="fday">12</div>
+                <div class="fmon">Sep</div>
+              </div>
+              <div>
+                <h4>Theyyam Heritage Documentation Day</h4>
+                <p>Mattannur Kavu, Kannur</p>
+              </div>
+            </div>
+            <div class="festival-card-body">
+              <p>A community event dedicated to documenting theyyam traditions, costumes, and rituals for the MDB heritage archive. Open to researchers and community members.</p>
+              <div class="festival-meta">
+                <span>📍 Mattannur</span>
+                <span>⏰ 10:00 AM – 5:00 PM</span>
+                <span>📅 1 Day</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="festival-card" data-month="Oct">
+            <div class="festival-card-header">
+              <div class="festival-date-badge">
+                <div class="fday">20</div>
+                <div class="fmon">Oct</div>
+              </div>
+              <div>
+                <h4>Grand Theyyam Season Opening — Iritty</h4>
+                <p>Iritty Kavu, Kannur East</p>
+              </div>
+            </div>
+            <div class="festival-card-body">
+              <p>The grand opening of the annual theyyam season across Kannur. Features multiple theyyam performances, ritual processions, and traditional drum ensembles.</p>
+              <div class="festival-meta">
+                <span>📍 Iritty</span>
+                <span>⏰ 5:00 AM – 11:00 PM</span>
+                <span>📅 5 Days</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="festival-card" data-month="Nov">
+            <div class="festival-card-header">
+              <div class="festival-date-badge">
+                <div class="fday">05</div>
+                <div class="fmon">Nov</div>
+              </div>
+              <div>
+                <h4>Muchilottu Kavu Ulsavam — Peravoor</h4>
+                <p>Peravoor Kavu, Kannur</p>
+              </div>
+            </div>
+            <div class="festival-card-body">
+              <p>The grand annual ulsavam (festival) at Peravoor kavu with multiple theyyam performances, processions, fireworks, and cultural programs spanning 7 days.</p>
+              <div class="festival-meta">
+                <span>📍 Peravoor</span>
+                <span>⏰ All day</span>
+                <span>📅 7 Days</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="festival-card" data-month="Dec">
+            <div class="festival-card-header">
+              <div class="festival-date-badge">
+                <div class="fday">15</div>
+                <div class="fmon">Dec</div>
+              </div>
+              <div>
+                <h4>Year-End MDB Welfare Ceremony</h4>
+                <p>Kannur District Hall, Kannur</p>
+              </div>
+            </div>
+            <div class="festival-card-body">
+              <p>Annual welfare distribution ceremony for MDB members and theyyam performers. Includes awards for outstanding community contributions and cultural programs.</p>
+              <div class="festival-meta">
+                <span>📍 Kannur District Hall</span>
+                <span>⏰ 10:00 AM – 4:00 PM</span>
+                <span>📅 1 Day</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="section card" style="text-align:center;">
+        <p style="margin-bottom:16px;">
+          Want to add a festival or kaavu event to the MDB calendar? Submit your event details through the member portal.
+        </p>
+        <a href="login.html" class="btn btn-primary">Submit a Festival Event</a>
+      </div>
+
+    </main>
+
+    <footer class="footer-bar">
+      © 2026 MDB Muchilottu Devasam Board. All rights reserved.
+    </footer>
+
+    <script>
+      const festFilters = document.querySelectorAll(".fest-filter");
+      const festCards = document.querySelectorAll(".festival-card");
+      festFilters.forEach(btn => {
+        btn.addEventListener("click", () => {
+          festFilters.forEach(b => { b.classList.remove("active","btn-primary"); b.classList.add("btn-ghost"); });
+          btn.classList.add("active","btn-primary"); btn.classList.remove("btn-ghost");
+          const m = btn.dataset.month;
+          festCards.forEach(card => {
+            card.style.display = (m === "all" || card.dataset.month === m) ? "" : "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

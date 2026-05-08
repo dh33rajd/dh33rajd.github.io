@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Muchilottu Devasam Board</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <!-- Vaniyar Eligibility Popup -->
+    <div class="modal-overlay" id="vaniyar-modal" role="dialog" aria-modal="true" aria-labelledby="vaniyar-modal-title">
+      <div class="modal-box">
+        <div class="modal-icon">🙏</div>
+        <h2 id="vaniyar-modal-title" data-en="Are you a Vaniyar?" data-ml="നിങ്ങൾ ഒരു വണിയർ ആണോ?">Are you a Vaniyar?</h2>
+        <p data-en="MDB membership is open exclusively to members of the Vaniyar community. Please confirm your community to proceed." data-ml="MDB അംഗത്വം വണിയർ സമുദായ അംഗങ്ങൾക്ക് മാത്രം ലഭ്യമാണ്. തുടരുന്നതിന് ദയവായി നിങ്ങളുടെ സമുദായം സ്ഥിരീകരിക്കുക.">
+          MDB membership is open exclusively to members of the Vaniyar community. Please confirm your community to proceed.
+        </p>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="vaniyar-yes" data-en="Yes, I am a Vaniyar" data-ml="അതെ, ഞാൻ ഒരു വണിയർ ആണ്">Yes, I am a Vaniyar</button>
+          <button class="btn btn-ghost" id="vaniyar-no" data-en="No" data-ml="അല്ല">No</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="public-header">
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span data-en="MDB Muchilottu Devasam Board" data-ml="MDB മുചിലോട്ട് ദേവസം ബോർഡ്">MDB Muchilottu Devasam Board</span>
+        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html" data-en="Home" data-ml="ഹോം">Home</a>
+          <a href="#about-mdb" data-en="About MDB" data-ml="MDB-നെ കുറിച്ച്">About MDB</a>
+          <a href="#membership" data-en="Membership" data-ml="അംഗത്വം">Membership</a>
+          <a href="#board-of-directors" data-en="Board" data-ml="ബോർഡ്">Board</a>
+          <a href="photo-gallery.html" data-en="Gallery" data-ml="ഗ്യാലറി">Gallery</a>
+          <a href="festival-calendar.html" data-en="Festivals" data-ml="ഉത്സവങ്ങൾ">Festivals</a>
+          <button class="btn-member-trigger btn btn-primary btn-sm" id="nav-become-member" data-en="Become a Member" data-ml="അംഗമാകൂ">Become a Member</button>
+          <a href="login.html" class="btn btn-ghost btn-sm" data-en="Login" data-ml="ലോഗിൻ">Login</a>
+          <div class="lang-toggle" role="group" aria-label="Language selector">
+            <button class="lang-btn active" id="lang-en" aria-pressed="true">EN</button>
+            <button class="lang-btn" id="lang-ml" aria-pressed="false">ML</button>
+          </div>
+        </nav>
+        <details class="mobile-nav-wrap" aria-label="Navigation">
+          <summary class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav-mobile" aria-label="Mobile navigation">
+            <a href="index.html" data-en="Home" data-ml="ഹോം">Home</a>
+            <a href="#about-mdb" data-en="About MDB" data-ml="MDB-നെ കുറിച്ച്">About MDB</a>
+            <a href="#membership" data-en="Membership" data-ml="അംഗത്വം">Membership</a>
+            <a href="#board-of-directors" data-en="Board" data-ml="ബോർഡ്">Board</a>
+            <a href="photo-gallery.html" data-en="Gallery" data-ml="ഗ്യാലറി">Gallery</a>
+            <a href="festival-calendar.html" data-en="Festivals" data-ml="ഉത്സവങ്ങൾ">Festivals</a>
+            <button class="btn-member-trigger btn btn-primary btn-sm" data-en="Become a Member" data-ml="അംഗമാകൂ">Become a Member</button>
+            <a href="login.html" class="btn btn-ghost btn-sm" data-en="Login" data-ml="ലോഗിൻ">Login</a>
+            <div class="lang-toggle" role="group" style="margin:8px 0 4px;">
+              <button class="lang-btn active" id="lang-en-m" aria-pressed="true">EN</button>
+              <button class="lang-btn" id="lang-ml-m" aria-pressed="false">ML</button>
+            </div>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content" class="public-main">
+
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <h1 id="hero-heading" data-en="Official Website of<br>MDB Muchilottu Devasam Board" data-ml="MDB മുചിലോട്ട് ദേവസം ബോർഡിന്റെ<br>ഔദ്യോഗിക വെബ്സൈറ്റ്">
+          Official Website of<br>MDB Muchilottu Devasam Board
+        </h1>
+        <p data-en="MDB coordinates and supports 108+ Muchilottu Kaavus across Kannur through community management, festival coordination, and member-driven welfare programs."
+           data-ml="MDB കണ്ണൂർ ജില്ലയിലെ 108+ മുചിലോട്ട് കാവുകളെ കമ്മ്യൂണിറ്റി മാനേജ്‌മെന്റ്, ഉത്സവ ഏകോപനം, അംഗ-കേന്ദ്രിത ക്ഷേമ പദ്ധതികൾ വഴി പിന്തുണയ്ക്കുന്നു.">
+          MDB coordinates and supports 108+ Muchilottu Kaavus across Kannur through
+          community management, festival coordination, and member-driven welfare programs.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-member-trigger btn btn-accent btn-lg" data-en="Become a Member" data-ml="അംഗമാകൂ">Become a Member</button>
+          <a class="btn btn-ghost-invert btn-lg" href="login.html" data-en="Member Login" data-ml="അംഗ ലോഗിൻ">Member Login</a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about-mdb" class="section grid-2" aria-labelledby="about-heading">
+        <article class="card feature-card">
+          <div class="feature-icon" aria-hidden="true">🏛</div>
+          <h3 id="about-heading" data-en="About MDB" data-ml="MDB-നെ കുറിച്ച്">About MDB</h3>
+          <p data-en="Muchilottu Devasam Board is a committee platform supporting kaavu communities, pooja workers, and theyyam traditions through organized communication and welfare initiatives across the Kannur region."
+             data-ml="മുചിലോട്ട് ദേവസം ബോർഡ് കണ്ണൂർ മേഖലയിൽ കാവ് സമൂഹങ്ങൾ, പൂജ ജോലിക്കാർ, തെയ്യം പാരമ്പര്യങ്ങൾ എന്നിവയെ സംഘടിത ആശയവിനിമയത്തിലൂടെ പിന്തുണയ്ക്കുന്ന ഒരു കമ്മിറ്റി പ്ലാറ്റ്ഫോം ആണ്.">
+            Muchilottu Devasam Board is a committee platform supporting kaavu communities,
+            pooja workers, and theyyam traditions through organized communication and
+            welfare initiatives across the Kannur region.
+          </p>
+          <span class="badge" data-en="Community Mission" data-ml="സമൂഹ ദൗത്യം">Community Mission</span>
+        </article>
+        <article class="card feature-card">
+          <div class="feature-icon" aria-hidden="true">🌿</div>
+          <h3 data-en="What MDB Does" data-ml="MDB എന്ത് ചെയ്യുന്നു">What MDB Does</h3>
+          <ul class="list">
+            <li data-en="Coordinates communication among kaavus and members" data-ml="കാവുകളും അംഗങ്ങളും തമ്മിലുള്ള ആശയവിനിമയം ഏകോപിപ്പിക്കുന്നു">Coordinates communication among kaavus and members</li>
+            <li data-en="Publishes festival and event updates across regions" data-ml="മേഖലകളിലുടനീളം ഉത്സവ, പരിപാടി അപ്‌ഡേറ്റുകൾ പ്രസിദ്ധീകരിക്കുന്നു">Publishes festival and event updates across regions</li>
+            <li data-en="Organizes member support programs and board initiatives" data-ml="അംഗ പിന്തുണ പദ്ധതികളും ബോർഡ് സംരംഭങ്ങളും സംഘടിപ്പിക്കുന്നു">Organizes member support programs and board initiatives</li>
+            <li data-en="Builds a structured network for 108+ Muchilottu Kaavus" data-ml="108+ മുചിലോട്ട് കാവുകൾക്ക് ഒരു ഘടനാപരമായ നെറ്റ്‌വർക്ക് നിർമ്മിക്കുന്നു">Builds a structured network for 108+ Muchilottu Kaavus</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Stats row -->
+      <section class="section grid-3" aria-label="MDB at a glance">
+        <article class="card" style="text-align:center;padding:28px;">
+          <div class="kpi">108+</div>
+          <div class="kpi-label" data-en="Kaavus Supported" data-ml="പിന്തുണ ലഭിക്കുന്ന കാവുകൾ">Kaavus Supported</div>
+        </article>
+        <article class="card" style="text-align:center;padding:28px;">
+          <div class="kpi">2,400+</div>
+          <div class="kpi-label" data-en="Active Members" data-ml="സജീവ അംഗങ്ങൾ">Active Members</div>
+        </article>
+        <article class="card" style="text-align:center;padding:28px;">
+          <div class="kpi">4</div>
+          <div class="kpi-label" data-en="Kannur Regions Covered" data-ml="കണ്ണൂർ മേഖലകൾ ഉൾപ്പെടുന്നു">Kannur Regions Covered</div>
+        </article>
+      </section>
+
+      <!-- Community Gallery -->
+      <section class="section" aria-labelledby="gallery-heading">
+        <div class="section-heading-row">
+          <h2 id="gallery-heading" class="section-heading" data-en="Community Gallery" data-ml="കമ്മ്യൂണിറ്റി ഗ്യാലറി">Community Gallery</h2>
+          <a href="photo-gallery.html" class="view-all-link" data-en="View All →" data-ml="എല്ലാം കാണുക →">View All →</a>
+        </div>
+        <div class="media-grid">
+          <div class="media-tile">
+            <div class="media-tile-placeholder" aria-label="Committee gathering"><img src="images/committee.png" alt="Community gathering and meeting" /></div>
+            <p data-en="Community members gathered for coordination meetings and planning." data-ml="ഏകോപന യോഗങ്ങൾക്കും ആസൂത്രണത്തിനുമായി ഒത്തുചേർന്ന കമ്മ്യൂണിറ്റി അംഗങ്ങൾ.">Community members gathered for coordination meetings and planning.</p>
+          </div>
+          <div class="media-tile">
+            <div class="media-tile-placeholder" aria-label="Kaavu temple"><img src="images/kaavu.png" alt="Kerala temple kaavu" /></div>
+            <p data-en="Kaavu and temple heritage spaces connected through MDB initiatives." data-ml="MDB സംരംഭങ്ങളിലൂടെ ബന്ധിപ്പിച്ചിരിക്കുന്ന കാവും ക്ഷേത്ര പൈതൃക ഇടങ്ങളും.">Kaavu and temple heritage spaces connected through MDB initiatives.</p>
+          </div>
+          <div class="media-tile">
+            <div class="media-tile-placeholder" aria-label="Festival activities"><img src="images/members.png" alt="Festival crowd and support activities" /></div>
+            <p data-en="Festival support, volunteer activities, and member engagement programs." data-ml="ഉത്സവ പിന്തുണ, സന്നദ്ധ പ്രവർത്തനങ്ങൾ, അംഗ ഇടപഴകൽ പദ്ധതികൾ.">Festival support, volunteer activities, and member engagement programs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional Modules Preview -->
+      <section class="section" aria-labelledby="modules-heading">
+        <h2 id="modules-heading" class="section-heading" data-en="Explore MDB" data-ml="MDB കണ്ടെത്തുക">Explore MDB</h2>
+        <div class="module-preview-grid">
+          <a href="photo-gallery.html" class="module-card" aria-label="Photo Gallery">
+            <div class="module-thumb gallery-thumb">📸</div>
+            <div class="module-card-body">
+              <h4 data-en="Photo Gallery" data-ml="ഫോട്ടോ ഗ്യാലറി">Photo Gallery</h4>
+              <p data-en="Browse photos from kaavu festivals, theyyam performances, and community events." data-ml="കാവ് ഉത്സവങ്ങൾ, തെയ്യം പ്രകടനങ്ങൾ, കമ്മ്യൂണിറ്റി പരിപാടികൾ എന്നിവയിൽ നിന്നുള്ള ഫോട്ടോകൾ.">Browse photos from kaavu festivals, theyyam performances, and community events.</p>
+              <span class="module-link-arrow" data-en="View Gallery →" data-ml="ഗ്യാലറി കാണുക →">View Gallery →</span>
+            </div>
+          </a>
+          <a href="archive.html" class="module-card" aria-label="Archive">
+            <div class="module-thumb archive-thumb">📚</div>
+            <div class="module-card-body">
+              <h4 data-en="Archive Session" data-ml="ആർക്കൈവ് സെഷൻ">Archive Session</h4>
+              <p data-en="Explore historical records, past events, and heritage documentation of MDB." data-ml="MDB-യുടെ ചരിത്ര രേഖകൾ, കഴിഞ്ഞ പരിപാടികൾ, പൈതൃക ഡോക്യുമെന്റേഷൻ.">Explore historical records, past events, and heritage documentation of MDB.</p>
+              <span class="module-link-arrow" data-en="View Archive →" data-ml="ആർക്കൈവ് കാണുക →">View Archive →</span>
+            </div>
+          </a>
+          <a href="festival-calendar.html" class="module-card" aria-label="Festival Calendar">
+            <div class="module-thumb calendar-thumb">🗓️</div>
+            <div class="module-card-body">
+              <h4 data-en="Festival Calendar" data-ml="ഉത്സവ കലണ്ടർ">Festival Calendar</h4>
+              <p data-en="Stay updated with upcoming theyyam and kaavu festival dates across Kannur." data-ml="കണ്ണൂരിലുടനീളം വരാനിരിക്കുന്ന തെയ്യം, കാവ് ഉത്സവ തീയതികൾ.">Stay updated with upcoming theyyam and kaavu festival dates across Kannur.</p>
+              <span class="module-link-arrow" data-en="View Calendar →" data-ml="കലണ്ടർ കാണുക →">View Calendar →</span>
+            </div>
+          </a>
+          <a href="live-streaming.html" class="module-card" aria-label="Live Theyyam Streaming">
+            <div class="module-thumb streaming-thumb">📺</div>
+            <div class="module-card-body">
+              <h4 data-en="Live Theyyam Streaming" data-ml="തെയ്യം ലൈവ് സ്ട്രീമിംഗ്">Live Theyyam Streaming</h4>
+              <p data-en="Watch live and recorded theyyam performances streamed via YouTube." data-ml="YouTube വഴി ലൈവ്, റെക്കോർഡ് ചെയ്ത തെയ്യം പ്രകടനങ്ങൾ.">Watch live and recorded theyyam performances streamed via YouTube.</p>
+              <span class="module-link-arrow" data-en="Watch Now →" data-ml="ഇപ്പോൾ കാണുക →">Watch Now →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Membership CTA -->
+      <section id="membership" class="section card" aria-labelledby="membership-heading">
+        <h2 id="membership-heading" data-en="Why Take MDB Membership?" data-ml="MDB അംഗത്വം എടുക്കേണ്ടത് എന്തുകൊണ്ട്?">Why Take MDB Membership?</h2>
+        <ul class="list" style="margin-bottom:24px;">
+          <li data-en="Get verified updates about your nearby kaavu and major festivals" data-ml="നിങ്ങളുടെ സമീപ കാവ്, പ്രധാന ഉത്സവങ്ങൾ എന്നിവയെ കുറിച്ചുള്ള പ്രാമാണിക അപ്‌ഡേറ്റുകൾ">Get verified updates about your nearby kaavu and major festivals</li>
+          <li data-en="Become part of the MDB community support network" data-ml="MDB കമ്മ്യൂണിറ്റി പിന്തുണ ശൃംഖലയുടെ ഭാഗമാകൂ">Become part of the MDB community support network</li>
+          <li data-en="Participate in organized initiatives and kaavu-level programs" data-ml="സംഘടിത സംരംഭങ്ങളിലും കാവ് തല പദ്ധതികളിലും പങ്കെടുക്കൂ">Participate in organized initiatives and kaavu-level programs</li>
+          <li data-en="Access member services and updates through the portal" data-ml="പോർട്ടലിലൂടെ അംഗ സേവനങ്ങളും അപ്‌ഡേറ്റുകളും ആക്സസ് ചെയ്യൂ">Access member services and updates through the portal</li>
+          <li data-en="Individual and Family membership plans available" data-ml="വ്യക്തിഗത, കുടുംബ അംഗത്വ പ്ലാനുകൾ ലഭ്യം">Individual and Family membership plans available</li>
+        </ul>
+        <div class="form-actions" style="margin-top:0;">
+          <button class="btn-member-trigger btn btn-primary" data-en="Become a Member" data-ml="അംഗമാകൂ">Become a Member</button>
+          <a class="btn btn-ghost" href="login.html" data-en="Member Login" data-ml="അംഗ ലോഗിൻ">Member Login</a>
+        </div>
+      </section>
+
+      <!-- Board of Directors -->
+      <section id="board-of-directors" class="section" aria-labelledby="bod-heading">
+        <h2 id="bod-heading" class="section-heading" data-en="Board of Directors" data-ml="ഡയറക്ടർ ബോർഡ്">Board of Directors</h2>
+        <p style="margin-bottom:4px;" data-en="Meet the dedicated leaders guiding MDB's mission across Kannur." data-ml="കണ്ണൂരിലുടനീളം MDB-യുടെ ദൗത്യം നയിക്കുന്ന സമർപ്പിത നേതാക്കൾ.">Meet the dedicated leaders guiding MDB's mission across Kannur.</p>
+        <div class="bod-grid">
+          <div class="bod-card">
+            <div class="bod-photo-placeholder">🧑</div>
+            <div class="bod-name" data-en="Krishnan Nair P." data-ml="കൃഷ്ണൻ നായർ പി.">Krishnan Nair P.</div>
+            <div class="bod-role" data-en="President" data-ml="പ്രസിഡന്റ്">President</div>
+            <p class="bod-bio" data-en="30+ years of community leadership. Oversees overall MDB operations and inter-kaavu coordination." data-ml="30+ വർഷം കമ്മ്യൂണിറ്റി നേതൃത്വം. MDB ഓപ്പറേഷനും കാവ് ഏകോപനവും നോക്കിക്കാണുന്നു.">30+ years of community leadership. Oversees overall MDB operations and inter-kaavu coordination.</p>
+          </div>
+          <div class="bod-card">
+            <div class="bod-photo-placeholder">👩</div>
+            <div class="bod-name" data-en="Saraswathy Menon K." data-ml="സരസ്വതി മേനോൻ കെ.">Saraswathy Menon K.</div>
+            <div class="bod-role" data-en="Vice President" data-ml="വൈസ് പ്രസിഡന്റ്">Vice President</div>
+            <p class="bod-bio" data-en="Leads women welfare programs and festival coordination committees for Kannur North region." data-ml="കണ്ണൂർ നോർത്ത് മേഖലയ്ക്ക് വേണ്ടി വനിത ക്ഷേമ പദ്ധതികളും ഉത്സവ ഏകോപന കമ്മിറ്റികളും നയിക്കുന്നു.">Leads women welfare programs and festival coordination committees for Kannur North region.</p>
+          </div>
+          <div class="bod-card">
+            <div class="bod-photo-placeholder">🧑</div>
+            <div class="bod-name" data-en="Rajan Varma T." data-ml="രാജൻ വർമ്മ ടി.">Rajan Varma T.</div>
+            <div class="bod-role" data-en="Secretary" data-ml="സെക്രട്ടറി">Secretary</div>
+            <p class="bod-bio" data-en="Manages member registrations, documentation, and board communications for all 108+ kaavus." data-ml="108+ കാവുകൾക്ക് വേണ്ടി അംഗ രജിസ്ട്രേഷൻ, ഡോക്യുമെന്റേഷൻ, ബോർഡ് ആശയവിനിമയം കൈകാര്യം ചെയ്യുന്നു.">Manages member registrations, documentation, and board communications for all 108+ kaavus.</p>
+          </div>
+          <div class="bod-card">
+            <div class="bod-photo-placeholder">🧑</div>
+            <div class="bod-name" data-en="Suresh Babu M." data-ml="സുരേഷ് ബാബു എം.">Suresh Babu M.</div>
+            <div class="bod-role" data-en="Treasurer" data-ml="ട്രഷറർ">Treasurer</div>
+            <p class="bod-bio" data-en="Oversees MDB's financial operations, member contribution tracking, and festival fund management." data-ml="MDB-യുടെ ധനകാര്യ പ്രവർത്തനങ്ങൾ, അംഗ സംഭാവന ട്രാക്കിംഗ്, ഉത്സവ ഫണ്ട് മാനേജ്‌മെന്റ് നോക്കിക്കാണുന്നു.">Oversees MDB's financial operations, member contribution tracking, and festival fund management.</p>
+          </div>
+          <div class="bod-card">
+            <div class="bod-photo-placeholder">👩</div>
+            <div class="bod-name" data-en="Devaki Pillai R." data-ml="ദേവകി പിള്ള ആർ.">Devaki Pillai R.</div>
+            <div class="bod-role" data-en="Joint Secretary" data-ml="ജോയിന്റ് സെക്രട്ടറി">Joint Secretary</div>
+            <p class="bod-bio" data-en="Coordinates theyyam cultural programs and heritage preservation initiatives across Kannur South." data-ml="കണ്ണൂർ സൗത്തിലുടനീളം തെയ്യം സാംസ്കാരിക പദ്ധതികളും പൈതൃക സംരക്ഷണ സംരംഭങ്ങളും ഏകോപിപ്പിക്കുന്നു.">Coordinates theyyam cultural programs and heritage preservation initiatives across Kannur South.</p>
+          </div>
+          <div class="bod-card">
+            <div class="bod-photo-placeholder">🧑</div>
+            <div class="bod-name" data-en="Anilkumar C. V." data-ml="അനിൽകുമാർ സി. വി.">Anilkumar C. V.</div>
+            <div class="bod-role" data-en="Executive Member" data-ml="എക്സിക്യൂട്ടീവ് അംഗം">Executive Member</div>
+            <p class="bod-bio" data-en="Handles public outreach, digital communications, and new member onboarding programs." data-ml="പൊതു ഔട്ട്‌റീച്ച്, ഡിജിറ്റൽ ആശയവിനിമയം, പുതിയ അംഗ ഓൺബോർഡിംഗ് പദ്ധതികൾ കൈകാര്യം ചെയ്യുന്നു.">Handles public outreach, digital communications, and new member onboarding programs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer-bar">
+        <span data-en="© 2026 MDB Muchilottu Devasam Board. All rights reserved." data-ml="© 2026 MDB മുചിലോട്ട് ദേവസം ബോർഡ്. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം.">
+          © 2026 MDB Muchilottu Devasam Board. All rights reserved.
+        </span>
+      </footer>
+
+    </main>
+
+    <script src="demo-flow.js"></script>
+    <script>
+      // Language toggle
+      const translations = {
+        en: { label: "EN" },
+        ml: { label: "ML" }
+      };
+
+      function applyLang(lang) {
+        document.documentElement.setAttribute("data-lang", lang);
+        document.querySelectorAll("[data-en][data-ml]").forEach(el => {
+          const text = el.getAttribute("data-" + lang);
+          if (text !== null) {
+            if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+              el.placeholder = text;
+            } else {
+              el.innerHTML = text;
+            }
+          }
+        });
+        // Update active states
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+          const isEn = btn.id === "lang-en" || btn.id === "lang-en-m";
+          const isMl = btn.id === "lang-ml" || btn.id === "lang-ml-m";
+          if (lang === "en" && isEn) { btn.classList.add("active"); btn.setAttribute("aria-pressed","true"); }
+          else if (lang === "ml" && isMl) { btn.classList.add("active"); btn.setAttribute("aria-pressed","true"); }
+          else { btn.classList.remove("active"); btn.setAttribute("aria-pressed","false"); }
+        });
+        localStorage.setItem("mdb_lang", lang);
+      }
+
+      ["lang-en","lang-en-m"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener("click", () => applyLang("en"));
+      });
+      ["lang-ml","lang-ml-m"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener("click", () => applyLang("ml"));
+      });
+
+      // Restore saved language
+      const savedLang = localStorage.getItem("mdb_lang");
+      if (savedLang === "ml") applyLang("ml");
+
+      // Vaniyar popup
+      const modal = document.getElementById("vaniyar-modal");
+      document.querySelectorAll(".btn-member-trigger").forEach(btn => {
+        btn.addEventListener("click", () => {
+          modal.classList.add("open");
+          document.getElementById("vaniyar-yes").focus();
+        });
+      });
+      document.getElementById("vaniyar-yes").addEventListener("click", () => {
+        modal.classList.remove("open");
+        window.location.href = "registration-account.html";
+      });
+      document.getElementById("vaniyar-no").addEventListener("click", () => {
+        modal.classList.remove("open");
+        window.location.href = "membership-denied.html";
+      });
+      modal.addEventListener("click", e => {
+        if (e.target === modal) modal.classList.remove("open");
+      });
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape") modal.classList.remove("open");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Membership Payment</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header class="public-header">
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          MDB Payment
+        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+        </nav>
+        <details class="mobile-nav-wrap">
+          <summary class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav-mobile">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content" class="public-main">
+
+      <div class="step-bar" role="list" aria-label="Registration steps">
+        <div class="step-item completed" role="listitem">
+          <div class="step-num">✓</div>
+          <span class="step-label">Account Setup</span>
+        </div>
+        <div class="step-connector completed" aria-hidden="true"></div>
+        <div class="step-item completed" role="listitem">
+          <div class="step-num">✓</div>
+          <span class="step-label">Contact Details</span>
+        </div>
+        <div class="step-connector completed" aria-hidden="true"></div>
+        <div class="step-item completed" role="listitem">
+          <div class="step-num">✓</div>
+          <span class="step-label">Membership Plan</span>
+        </div>
+        <div class="step-connector completed" aria-hidden="true"></div>
+        <div class="step-item active" role="listitem" aria-current="step">
+          <div class="step-num">4</div>
+          <span class="step-label">Payment</span>
+        </div>
+      </div>
+
+      <section class="section card">
+        <h1>Membership Payment</h1>
+        <p style="margin:0;">Review your details below and complete payment to submit your membership application.</p>
+      </section>
+
+      <section class="section grid-2">
+        <article class="card">
+          <h3 class="card-heading">Payment Summary</h3>
+          <ul class="info-summary">
+            <li><span class="key">Membership Plan</span><span class="val" id="pay-plan">—</span></li>
+            <li><span class="key">Member Name</span><span class="val" id="pay-member">—</span></li>
+            <li><span class="key">Kaavu</span><span class="val" id="pay-kaavu">—</span></li>
+            <li><span class="key">Total Payable</span><span class="val" id="pay-total">—</span></li>
+          </ul>
+          <span class="status approved">Transaction Status: Successful</span>
+        </article>
+
+        <article class="card">
+          <h3 class="card-heading">Payment Methods Accepted</h3>
+          <div class="payment-methods">
+            <span class="payment-badge">📱 UPI</span>
+            <span class="payment-badge">💳 Debit / Credit Card</span>
+            <span class="payment-badge">🏦 Net Banking</span>
+          </div>
+          <p style="margin:0;font-size:0.875rem;">
+            Your payment is securely processed. After submission your application will be reviewed by the committee.
+          </p>
+        </article>
+      </section>
+
+      <section class="section card">
+        <div class="form-actions" style="margin-top:0;">
+          <a id="submit-payment" class="btn btn-primary btn-lg" href="pending-approval.html">Submit Application →</a>
+          <a class="btn btn-ghost" href="register-flow.html">← Back</a>
+        </div>
+        <div id="payment-error" class="alert-box" role="alert" aria-live="polite"></div>
+      </section>
+
+    </main>
+    <script src="demo-flow.js"></script>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDB — Live Theyyam Streaming</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header class="public-header">
+      <div class="wrap">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          MDB Muchilottu Devasam Board
+        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="photo-gallery.html">Gallery</a>
+          <a href="festival-calendar.html">Festivals</a>
+          <a href="archive.html">Archive</a>
+          <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+        </nav>
+        <details class="mobile-nav-wrap">
+          <summary class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav-mobile">
+            <a href="index.html">Home</a>
+            <a href="photo-gallery.html">Gallery</a>
+            <a href="festival-calendar.html">Festivals</a>
+            <a href="login.html">Login</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content" class="public-main">
+
+      <!-- Stream Hero -->
+      <div class="stream-hero section">
+        <div class="live-badge" id="live-status-badge">
+          <span class="live-dot"></span>
+          <span id="live-label">LIVE NOW</span>
+        </div>
+        <h2>Theyyam Live Streaming</h2>
+        <p>Watch Muchilottu Theyyam performances live from Kannur's sacred kaavus. Connect with the divine tradition from anywhere in the world.</p>
+      </div>
+
+      <!-- Stream Player + Sidebar -->
+      <section class="section" aria-labelledby="stream-heading">
+        <h2 id="stream-heading" class="sr-only">Live Stream Player</h2>
+        <div class="stream-grid">
+
+          <!-- Main Player -->
+          <div>
+            <div class="stream-embed-wrapper">
+              <!-- Replace the src with the actual YouTube live stream embed URL when available -->
+              <!-- Example: https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID -->
+              <div class="stream-placeholder" id="stream-placeholder">
+                <div class="play-icon">▶️</div>
+                <h3 style="color:#fff;margin:0 0 8px;">No Live Stream Currently Active</h3>
+                <p style="color:#aaa;text-align:center;max-width:320px;font-size:0.9rem;">
+                  Live streams are broadcast during festival days. Subscribe to the MDB YouTube channel to get notified when a stream starts.
+                </p>
+                <a href="https://www.youtube.com/@MuchilottuDevasamBoard" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:8px;">
+                  🔔 Subscribe on YouTube
+                </a>
+              </div>
+              <!-- Uncomment when a live stream is active:
+              <iframe
+                id="youtube-stream"
+                src="https://www.youtube.com/embed/STREAM_ID?autoplay=1&rel=0"
+                title="MDB Live Theyyam Stream"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              -->
+            </div>
+
+            <!-- Current/Next Event Info -->
+            <div class="card" style="margin-top:16px;padding:20px;">
+              <div style="display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;">
+                <div style="flex:1;min-width:200px;">
+                  <div class="badge" style="margin-bottom:8px;">Next Stream</div>
+                  <h3 style="margin-bottom:4px;">Muchilottu Bhagavathi Theyyam — Taliparamba</h3>
+                  <p style="font-size:0.875rem;margin-bottom:0;">📅 May 14, 2026 &nbsp;|&nbsp; ⏰ 6:00 AM IST &nbsp;|&nbsp; 📍 Taliparamba Kavu</p>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
+                  <a href="https://www.youtube.com/@MuchilottuDevasamBoard" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">🔔 Set Reminder</a>
+                  <a href="festival-calendar.html" class="btn btn-ghost btn-sm">View Calendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Past Streams Sidebar -->
+          <div>
+            <h3 style="margin-bottom:14px;">Past Recordings</h3>
+            <div class="stream-sidebar">
+
+              <div class="stream-past-item">
+                <div class="stream-past-thumb">🔥</div>
+                <div class="stream-past-info">
+                  <h5>Theyyam — Azhikode Festival 2025</h5>
+                  <p>Dec 15, 2025 · 4h 32m · 1,240 views</p>
+                </div>
+              </div>
+
+              <div class="stream-past-item">
+                <div class="stream-past-thumb">🎭</div>
+                <div class="stream-past-info">
+                  <h5>Grand Theyyam Season Opening — Iritty</h5>
+                  <p>Oct 20, 2025 · 6h 15m · 3,560 views</p>
+                </div>
+              </div>
+
+              <div class="stream-past-item">
+                <div class="stream-past-thumb">🌿</div>
+                <div class="stream-past-info">
+                  <h5>Peravoor Kavu Ulsavam — Day 1</h5>
+                  <p>Nov 5, 2025 · 5h 48m · 2,110 views</p>
+                </div>
+              </div>
+
+              <div class="stream-past-item">
+                <div class="stream-past-thumb">🪔</div>
+                <div class="stream-past-info">
+                  <h5>Kavu Puja — Payyanur 2025</h5>
+                  <p>May 22, 2025 · 3h 10m · 890 views</p>
+                </div>
+              </div>
+
+              <div class="stream-past-item">
+                <div class="stream-past-thumb">🥁</div>
+                <div class="stream-past-info">
+                  <h5>Chenda Melam — Pappinisseri</h5>
+                  <p>Aug 3, 2025 · 2h 20m · 670 views</p>
+                </div>
+              </div>
+
+              <div style="text-align:center;padding:12px 0;">
+                <a href="https://www.youtube.com/@MuchilottuDevasamBoard" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">View All on YouTube →</a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- YouTube Subscribe CTA -->
+      <section class="section card" style="text-align:center;">
+        <div style="font-size:2.5rem;margin-bottom:12px;">📺</div>
+        <h2 style="margin-bottom:8px;">Subscribe to MDB on YouTube</h2>
+        <p style="max-width:520px;margin:0 auto 20px;">
+          Never miss a live theyyam performance. Subscribe to the MDB YouTube channel to get notified about upcoming live streams and new recordings.
+        </p>
+        <a href="https://www.youtube.com/@MuchilottuDevasamBoard" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-lg">
+          ▶ Subscribe on YouTube
+        </a>
+        <p style="margin-top:14px;font-size:0.8rem;color:var(--text-muted);">
+          Streams are broadcast live during major kaavu festivals. Check the <a href="festival-calendar.html">Festival Calendar</a> for upcoming dates.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="footer-bar">
+      © 2026 MDB Muchilottu Devasam Board. All rights reserved.
+    </footer>
+  </body>
+</html>
